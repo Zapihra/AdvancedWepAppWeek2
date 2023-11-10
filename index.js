@@ -8,6 +8,10 @@ app.get('/hello', (req,res) => {
     })
 })
 
+app.get('/echo/:id', (req,res) => {
+    res.send(req.params);
+})
+
 app.listen(port, () => {
     console.log(`Example app listening port ${port}`)
 })
